@@ -1,0 +1,16 @@
+package com.mycompany.logicgateor;
+import java.util.Scanner;
+public class LogicGateOR {
+    public static void main(String[] args) {
+        try (Scanner read = new Scanner(System.in)) {
+            System.out.println("Enter two values (0 or 1) to simulate OR gate:");
+            int input1 = read.nextInt();
+            int input2 = read.nextInt();          
+            int result = orGate(input1, input2);
+            System.out.println("OR(" + input1 + ", " + input2 + ") = " + result);
+        }
+    }
+    public static int orGate(int input1, int input2) {     
+        return (input1 == 1 || input2 == 1) ? 1 : 0;
+    }
+}

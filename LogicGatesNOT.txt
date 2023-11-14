@@ -1,0 +1,15 @@
+package com.mycompany.logicgatesnot;
+import java.util.Scanner;
+public class LogicGatesNot {
+    public static void main(String[] args) {
+        try (Scanner read = new Scanner(System.in)) {
+            System.out.println("Enter a value (0 or 1) to simulate NOT gate:");
+            int input = read.nextInt();
+            int result = notGate(input);
+            System.out.println("NOT(" + input + ") = " + result);
+        }
+    }
+    public static int notGate(int input) {
+        return (input == 0) ? 1 : 0;
+    }
+}
